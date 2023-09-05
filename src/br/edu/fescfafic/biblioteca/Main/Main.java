@@ -24,6 +24,14 @@ public class Main {
                 10
         );
 
+        Livro livro2 = new Livro(
+                "Neuromancer",
+                "William Gibson",
+                "d4a5sd46as5d4",
+                LocalDate.of(2015, 5, 15),
+                10
+        );
+
         //livro.exibirInfo();
 
         Biblioteca biblioteca = new Biblioteca(
@@ -32,6 +40,11 @@ public class Main {
         );
 
         biblioteca.cadastrarLivro(livro);
+        biblioteca.cadastrarLivro(livro2);
+
+        biblioteca.acervo[0].exibirInfo();
+        System.out.println("\n------------------");
+        biblioteca.acervo[1].exibirInfo();
 
     }
 }
