@@ -2,6 +2,7 @@ package br.edu.fescfafic.biblioteca.Main;
 
 import br.edu.fescfafic.biblioteca.Model.Usuario;
 import br.edu.fescfafic.biblioteca.Model.Livro;
+import br.edu.fescfafic.biblioteca.Model.Biblioteca;
 
 import java.time.LocalDate;
 
@@ -23,8 +24,14 @@ public class Main {
                 10
         );
 
-        livro.exibirInfo();
+        //livro.exibirInfo();
 
+        Biblioteca biblioteca = new Biblioteca(
+                "Corujao",
+                "Rua dos bobos"
+        );
+
+        biblioteca.cadastrarLivro(livro);
 
     }
 }
