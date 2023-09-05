@@ -42,9 +42,15 @@ public class Main {
         biblioteca.cadastrarLivro(livro);
         biblioteca.cadastrarLivro(livro2);
 
-        biblioteca.acervo[0].exibirInfo();
-        System.out.println("\n------------------");
-        biblioteca.acervo[1].exibirInfo();
+        Livro livroBuscado1 = biblioteca.buscarPorTitulo("Neuromancer");
+        Livro livroBuscado2 = biblioteca.buscarPorAutor("Aldous Huxley");
+
+        if(livroBuscado2 != null){
+            livroBuscado2.exibirInfo();
+        } else {
+            System.out.println("Livro nao encontrado");
+        }
+
 
     }
 }

@@ -27,6 +27,24 @@ public class Biblioteca {
         this.quantidadeDeLivros++;
     }
 
+    public Livro buscarPorTitulo(String titulo){
+        for (int i = 0; i < quantidadeDeLivros; i++){
+            if (this.acervo[i].titulo.equalsIgnoreCase(titulo)){
+                return this.acervo[i];
+            }
+        }
+        return null;
+    }
+
+    public Livro buscarPorAutor(String autor){
+        for (int i=0; i < quantidadeDeLivros; i++){
+            if(this.acervo[i].autor.equalsIgnoreCase(autor)){
+                return this.acervo[i];
+            }
+        }
+        return null;
+    }
+
 
     // verificarDisponibilidade, cadastrarLivro, localizarLivroPorTitulo e Autor
     // devolver, emprestar, exibirInfo
