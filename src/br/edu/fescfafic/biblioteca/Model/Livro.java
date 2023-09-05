@@ -12,5 +12,22 @@ public class Livro {
     public LocalDate anoDePublicacao;
     public int quantidadeEstoque;
 
+    public Livro(String titulo, String autor, String isbn, LocalDate ano, int qntEstoque){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.isbn = isbn;
+        this.anoDePublicacao = ano;
+        this.quantidadeEstoque = qntEstoque;
+    }
+
+    public void exibirInfo(){
+        System.out.printf("Titulo: %s", this.titulo);
+        System.out.printf("\nAutor: %s", this.autor);
+        System.out.printf("\nISBN: %s", this.isbn);
+        System.out.printf("\nAno: %s", this.anoDePublicacao);
+        System.out.printf("\nQuantidade Disponivel: %d", this.quantidadeEstoque);
+
+    }
+
 
 }
